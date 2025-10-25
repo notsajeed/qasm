@@ -1,0 +1,4 @@
+qubits 2
+cregs 2
+bell q0,q1
+measure all
