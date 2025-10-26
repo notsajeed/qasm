@@ -1,4 +1,20 @@
-qubits 2
-cregs 2
+# 4-qubit GHZ state with additional operations
+qubits 4
+cregs 4
+
+# Create GHZ state for all 4 qubits
+ghz q0,q1,q2,q3
+
+# Add a Bell pair between first two qubits again (reusing macro)
 bell q0,q1
+
+# Oracle marking |11> state between q2 and q3
+oracle11 q2,q3
+
+# Additional single-qubit operations
+h q1
+x q2
+z q3
+
+# Measure all qubits
 measure all
